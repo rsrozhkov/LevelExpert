@@ -1,0 +1,1 @@
+input double   tradeLots = 0.01;  //
