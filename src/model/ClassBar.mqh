@@ -1,5 +1,5 @@
 //+------------------------------------------------------------------+
-//|                                                   ClassLevel.mqh |
+//|                                                     ClassBar.mqh |
 //|                                                           Roaman |
 //|                                             https://www.mql5.com |
 //+------------------------------------------------------------------+
@@ -10,13 +10,13 @@
 //|                                                                  |
 //+------------------------------------------------------------------+
 
-class ClassLevel{
+class ClassBar{
    private:
       double m_highPrice;
       double m_lowPrice;
    
    public:
-      ClassLevel(double highPrice,
+      ClassBar(double highPrice,
                double lowPrice):
                m_highPrice(highPrice),
                m_lowPrice(lowPrice){}
@@ -30,7 +30,7 @@ class ClassLevel{
       }
       
       string toString(){
-         return ("LEVEL: High="+(string)m_highPrice
-                     +"  Low="+(string)m_lowPrice);
+         return ("BAR: High="+(string)m_highPrice
+                   +"  Low="+(string)m_lowPrice);
       }
 };

@@ -1,5 +1,5 @@
 //+------------------------------------------------------------------+
-//|                                                   ClassLevel.mqh |
+//|                                                   ClassPrice.mqh |
 //|                                                           Roaman |
 //|                                             https://www.mql5.com |
 //+------------------------------------------------------------------+
@@ -9,28 +9,25 @@
 //+------------------------------------------------------------------+
 //|                                                                  |
 //+------------------------------------------------------------------+
-
-class ClassLevel{
+class ClassPrice{
    private:
-      double m_highPrice;
-      double m_lowPrice;
+      double m_ask;
+      double m_bid;
    
    public:
-      ClassLevel(double highPrice,
-               double lowPrice):
-               m_highPrice(highPrice),
-               m_lowPrice(lowPrice){}
+      ClassPrice(double ask, double bid):
+                  m_ask(ask), m_bid(bid){}
       
-      double getHigh(){
-         return m_highPrice;
+      double getAsk(){
+         return m_ask;
       }
       
-      double getLow(){
-         return m_lowPrice;
+      double getBid(){
+         return m_bid;
       }
       
       string toString(){
-         return ("LEVEL: High="+(string)m_highPrice
-                     +"  Low="+(string)m_lowPrice);
+         return ("PRICE: Ask="+(string)m_ask
+                      +" Bid="+(string)m_bid);
       }
 };

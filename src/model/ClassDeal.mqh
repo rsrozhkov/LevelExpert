@@ -10,20 +10,20 @@
 //|                                                                  |
 //+------------------------------------------------------------------+
 
-#include "ENUMS.mqh"
+#include "Enums.mqh"
 
 class ClassDeal {
    private:
-      EnumTradeType m_tradeType;
       ulong m_ticket;
+      EnumTradeType m_tradeType;
       double m_volume;
       double m_openPrice;
       double m_stopLoss;
       double m_takeProfit;
    
    public:
-      ClassDeal(EnumTradeType tradeType,
-         ulong ticket,
+      ClassDeal(ulong ticket,
+         EnumTradeType tradeType,
          double volume,
          double openPrice,
          double stopLoss,
@@ -35,8 +35,8 @@ class ClassDeal {
             m_stopLoss(stopLoss),
             m_takeProfit(takeProfit){}
 
-      ClassDeal(EnumTradeType tradeType,
-         ulong ticket,
+      ClassDeal(ulong ticket,
+         EnumTradeType tradeType,
          double volume,
          double openPrice):
             m_tradeType(tradeType),
@@ -79,7 +79,7 @@ class ClassDeal {
       }
       
       string toString() {
-         return ("ClassDeal:   tradeType:"+EnumToString(m_tradeType)
+         return ("DEAL:   tradeType:"+EnumToString(m_tradeType)
                          +";   ticket:"+(string)m_ticket
                          +";   volume:"+(string)m_volume
                          +";   openPrice:"+(string)m_openPrice
