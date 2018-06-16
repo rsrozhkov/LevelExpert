@@ -1,5 +1,5 @@
 //+------------------------------------------------------------------+
-//|                                             TestClassLevel.mq5 |
+//|                                                    TestPrice.mq5 |
 //|                                                           Roaman |
 //|                                             https://www.mql5.com |
 //+------------------------------------------------------------------+
@@ -7,18 +7,15 @@
 #property link      "https://www.mql5.com"
 #property version   "1.00"
 
-#include "..\..\src\model\ClassLevel.mqh"
-#include "..\..\src\model\ENUMS.mqh"
+#include "..\..\src\model\ClassPrice.mqh"
 
 void OnStart(){
 
-   EnumLevelType levelType = FLAT;
-   EnumTradeType tradeType = BUY;
-   double highPrice = 1.0000;
-   double lowPrice = 0.55490;
-
-   ClassLevel level(levelType,tradeType,highPrice,lowPrice,true);
+   double bid = 1.558;
+   double ask = 1.560;
    
-   printf(level.toString());
-   Print("DONE!\n\n");
+   ClassPrice price(bid,ask);
+   
+   Print(price.toString());
+      
 }
